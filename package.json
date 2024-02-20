@@ -1,0 +1,38 @@
+{
+  "name": "@enhanced-dom/blog-template",
+  "version": "0.0.1",
+  "description": "Starter for a blog",
+  "keywords": [],
+  "repository": "https://github.com/enhanced-dom/blog-template.git",
+  "license": "MIT",
+  "author": "CD9B4A105290E17E0948E021DF4105107C88693C59C0B891CCC08366C51AEA990902A6A156AC87D88A2FC41422A5E1C3C4071F251F19441C4516000EC25F87DF",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "rimraf dist/*",
+    "build": "webpack build --mode=production",
+    "analyze": "webpack build --mode=production --env analyzeBundle",
+    "dev": "webpack serve",
+    "lint": "eslint --fix --config eslint.config.js --no-warn-ignored src",
+    "start": "webpack serve",
+    "postinstall": "@enhanced-dom-husky",
+    "serve": "serve -s dist"
+  },
+  "overrides": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "dependencies": {
+    "@enhanced-dom/slides": "^0.1.0"
+  },
+  "devDependencies": {
+    "@enhanced-dom/babel": "^0.1.0",
+    "@enhanced-dom/lint": "^0.1.4",
+    "@enhanced-dom/webpack": "^0.1.0",
+    "@types/react": "^17.0.75",
+    "@types/react-dom": "^17.0.25"
+  },
+  "engines": {
+    "node": ">=18",
+    "npm": ">=10"
+  }
+}
